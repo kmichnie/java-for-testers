@@ -15,7 +15,7 @@ public class WhenCreatingObjects {
         Assert.assertEquals(felix.getFavoriteFood(), "Tuna");
         Assert.assertEquals(felix.getAge(), 4);
 
-        Pet hampter = new Pet("Rusty");
+        Pet hamster = new Pet("Rusty");
     }
 
     @Test
@@ -34,5 +34,13 @@ public class WhenCreatingObjects {
         Cat spot = new Cat("Spot","Salmon", 3);
 
         System.out.println("Cats like " + usualFood());
+    }
+
+    @Test
+    public void creating_a_hamster() {
+        Hamster rusty = new Hamster("Rusty", "Tumbling", 1);
+        Assert.assertEquals(rusty.getName(), "Rusty");
+        Assert.assertEquals(rusty.getGame(), "Tumbling");
+        Assert.assertEquals(rusty.getAge(), 1);
     }
 }
