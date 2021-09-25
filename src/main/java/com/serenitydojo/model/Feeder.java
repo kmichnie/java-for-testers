@@ -5,10 +5,11 @@ public class Feeder {
         if (animal.equals("Cat")) {
             return (isPremium) ? "Salmon" : "Tuna";
         } else if (animal.equals("Dog")) {
-            return "Dog Food";
+            return (isPremium) ? "Chicken" : "Dog Food";
+        } else if (animal.equals("Hamster")) {
+            return (isPremium) ? "Lettuce" : "Cabbage";
         }
 
-        return "Cabbage";
-
+        return "Junk Food";
     }
 }
