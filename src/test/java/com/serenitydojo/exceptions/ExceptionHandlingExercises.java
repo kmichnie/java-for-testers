@@ -48,7 +48,7 @@ public class ExceptionHandlingExercises {
      * and update the fileHasText() method to throw this exception if no matching file is found.
      */
     @Test(expected = MissingWelcomeFileException.class)
-    public void catchingCustomExceptionsWhenTheFileDoesNotExist() throws Exception{
+    public void catchingCustomExceptionsWhenTheFileDoesNotExist() {
         FileLoader fileLoader = new FileLoader();
         assertThat(fileLoader.fileHasText("does-not-exist.txt","Hello World")).isFalse();
     }

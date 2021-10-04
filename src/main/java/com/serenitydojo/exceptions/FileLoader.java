@@ -19,11 +19,11 @@ public class FileLoader {
         }
     }
 
-    public Boolean fileHasText(String filename, String expectedText) throws IOException {
+    public Boolean fileHasText(String filename, String expectedText) {
         try {
             String path = "src/main/resources/" + filename;
             return (Files.readString(Paths.get(path)).contains(expectedText));
-        } catch (NoSuchFileException noSuchFileException) {
+        } catch (IOException noSuchFileException) {
             throw new MissingWelcomeFileException(filename + " file does not exist.", noSuchFileException);
         }
     }
